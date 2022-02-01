@@ -1,26 +1,28 @@
 @extends('layout.base', ['nav_quran' => 'active'])
 
-@section('title', 'Daftar Surat Al-Qur\'an')
+@section('title', 'Baca Al-Qur\'an')
 
 @section('content')
 
 <script type="text/javascript">
 	function showSurat() {
+		document.title = "{!! env('APP_NAME') !!} | Daftar Surat Al-Qur'an"
 		let a = document.getElementById("surat")
 		let b = document.getElementById("juz")
 		let c = document.getElementById("surat_btn")
 		let d = document.getElementById('juz_btn')
 		b.classList.remove("d-block")
 		b.classList.add("d-none")
-		d.classList.remove("text-primary")
+		d.classList.remove("pil_quran")
 		d.classList.add("text-muted")
 		a.classList.remove("d-none")
 		a.classList.add("d-block")
 		c.classList.remove("text-muted")
-		c.classList.add("text-primary")
+		c.classList.add("pil_quran")
 	}
 
 	function showJuz() {
+		document.title = "{!! env('APP_NAME') !!} | Daftar Juz Al-Qur'an"
 		let a = document.getElementById("surat")
 		let b = document.getElementById("juz")
 		let c = document.getElementById("surat_btn")
@@ -28,16 +30,21 @@
 		a.classList.remove("d-block")
 		a.classList.add("d-none")
 		d.classList.remove("text-muted")
-		d.classList.add("text-primary")
+		d.classList.add("pil_quran")
 		b.classList.remove("d-none")
 		b.classList.add("d-block")
-		c.classList.remove("text-primary")
+		c.classList.remove("pil_quran")
 		c.classList.add("text-muted")
 	}
 </script>
 
+<!-- Hero -->
+<div class="px-4 py-5 my-5 text-center brand">
+    <h1 class="display-5 fw-bold">Baca Al-Qur'an</h1>
+</div>
+
 <!-- Pilihan -->
-<div class="text-center"><h3>Baca berdasarkan</h3></div>
+<div class="text-center"><h4>baca berdasarkan</h4></div>
 <ul class="nav justify-content-center mb-2">
   <li class="nav-item">
     <a class="nav-link fs-3 text-muted" id="surat_btn" onclick="showSurat()" href="#">Surat</a>

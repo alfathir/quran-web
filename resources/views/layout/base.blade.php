@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Quintessential&display=swap" rel="stylesheet"> 
 
     <style type="text/css">
       .arab {
@@ -23,7 +24,7 @@
       }
 
       .bg2 {
-        background-color: #F76E11 !important;
+        background-color: #fee9e4 !important;
       }
 
       .bg3 {
@@ -35,7 +36,7 @@
       }
 
       .bg-theme {
-        background-color: #FFBC80 !important;
+        background-color: #ffffff !important;
       }
 
       .c1 {
@@ -55,16 +56,16 @@
       }
 
       .active {
-        color: #F5F5F5 !important;
+        color: #e45e5e !important;
       }
 
       .brand {
-        color:  #FFE162 !important;
+        color: #e45e5e !important;
       }
 
       .btn-primary {
-        background-color: #270082 !important;
-        border-color: #270082 !important;
+        background-color: #8e130c !important;
+        border-color: #8e130c !important;
       }
 
       .btn-success {
@@ -73,7 +74,7 @@
       }
 
       .text-primary {
-        color: #FFE162 !important;
+        color: #e45e5e !important;
       }
 
       .foottext {
@@ -81,14 +82,19 @@
       }
 
       .bg-card {
-        background-color: #FF9F45 !important;
+        background-color: #fefefe !important;
       }
 
-      .footer {
-        position: fixed !important;
-        left: 0 !important;
-        bottom: 0 !important;
-        width: 100% !important;
+      .tagline {
+        font-family: 'Quintessential', cursive;
+      }
+
+      .pil_quran {
+        color: #e45e5e !important;
+      }
+
+      .head-detail {
+        background-color: #fee9e4 !important;
       }
     </style>
 
@@ -98,7 +104,7 @@
     <!-- Navbar -->
     <nav class="navbar sticky-top navbar-expand-lg navbar-light bg2">
       <div class="container">
-        <a class="navbar-brand brand" href="/">{{ env('APP_NAME') }}</a>
+        <a class="navbar-brand brand tagline" href="/"><b>{{ env('APP_NAME') }}</b></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -119,7 +125,7 @@
 
     <footer class="footer mt-auto py-3 text-center bg2 mb-0">
       <div class="container">
-        <span class="foottext">Dibuat dengan 💜 oleh <b onclick="window.location.href = 'https://alfathir.id'" class="brand">M Habiburrohman Al-Fathir</b>, dispesialkan untuk <b class="brand">Firdausi Ridhotul Ullah</b></span>
+        <span class="foottext">Dibuat dengan 💜 oleh <b class="brand">M Habiburrohman Al-Fathir</b>, dispesialkan untuk <b class="brand">Firdausi Ridhotul Ullah</b></span>
       </div>
     </footer>
 

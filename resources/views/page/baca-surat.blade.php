@@ -27,7 +27,7 @@
 	}
 </script>
 
-<div class="card mb-4">
+<div class="card mb-4 head-detail">
   <div class="card-body">
     <h5 class="card-title fs-2">{{ $data['nama_latin'] }} - {{ $data['nama'] }}</h5>
     <p class="card-text text-muted">{!! $data['deskripsi'] !!}</p>

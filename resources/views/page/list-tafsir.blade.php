@@ -1,8 +1,13 @@
 @extends('layout.base', ['nav_tafsir' => 'active'])
 
-@section('title', 'Daftar Tafsir Al-Qur\'an')
+@section('title', 'Baca Tafsir Al-Qur\'an')
 
 @section('content')
+
+<!-- Hero -->
+<div class="px-4 py-5 my-5 text-center brand">
+    <h1 class="display-5 fw-bold">Baca Tafsir Al-Qur'an</h1>
+</div>
 
 @foreach($datas as $data)
 <div class="row mb-lg-2">
