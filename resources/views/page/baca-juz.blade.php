@@ -1,11 +1,11 @@
 @extends('layout.base', ['nav_quran' => 'active'])
 
-@section('title', "Baca Surat $data[nama_latin]")
+@section('title', "Baca Juz $id")
 
 @section('content')
 
 <script type="text/javascript">
-	var mp3 = new Audio("{{ $data['audio'] }}")
+	var mp3 = new Audio("https://files.muhammadantariksa.com/perjuz/misyari/{{ str_pad($id, 2, '0', STR_PAD_LEFT); }}.mp3")
 	var audio = "Putar Audio"
 
 	function audioHandler() {
@@ -29,14 +29,14 @@
 
 <div class="card mb-4">
   <div class="card-body">
-    <h5 class="card-title fs-2">{{ $data['nama_latin'] }} - {{ $data['nama'] }}</h5>
-    <p class="card-text text-muted">{!! $data['deskripsi'] !!}</p>
-    <a href="/tafsir/{{ $data['nomor'] }}" class="btn btn-primary">Lihat Tafsir</a>
+    <h5 class="card-title fs-2">Juz {{ $id }} - {{ $juz_nama[$id - 1] }}</h5>
+    <p class="card-text text-muted">{{ $juz_surat[$id - 1] }}</p>
     <button class="btn btn-success" onclick="audioHandler()" id="audio-btn">Putar Audio</button>
   </div>
 </div>
 
-@if($id != 1)
+@foreach($data['data']['verses'] as $ayat)
+@if($ayat['number']['inSurah'] == 1 && $ayat['number']['inQuran'] != 1)
 <hr>
 <figure class="mb-2">
   <blockquote class="blockquote text-center fs-2 arab">
@@ -44,14 +44,13 @@
   </blockquote>
 </figure>
 @endif
-@foreach($data['ayat'] as $ayat)
 <figure class="mb-2 bg-light rounded px-2 py-2">
-  <p class="text-muted" style="margin-bottom: -5px !important">{{ $data['nomor'] }}:{{ $ayat['nomor'] }}</p>
+  <p class="text-muted" style="margin-bottom: -5px !important">{{ $ayat['number']['inSurah'] }}</p>
   <blockquote class="blockquote text-end fs-2 arab">
-    <p>{{ $ayat['ar'] }}</p>
+    <p>{{ $ayat['text']['arab'] }}</p>
   </blockquote>
   <figcaption class="blockquote-footer">
-    <cite>{{ $ayat['idn'] }}</cite>
+    <cite>{{ $ayat['translation']['id'] }}</cite>
   </figcaption>
 </figure>
 @endforeach

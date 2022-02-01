@@ -21,7 +21,8 @@ Route::get('/beranda', function() {
 
 // Surat
 Route::get('/quran', [App\Http\Controllers\DaftarSurat::class, 'list']);
-Route::get('/quran/{id}', [App\Http\Controllers\DaftarSurat::class, 'detail']);
+Route::get('/quran/surat/{id}', [App\Http\Controllers\DaftarSurat::class, 'bacaSurat']);
+Route::get('/quran/juz/{id}', [App\Http\Controllers\DaftarSurat::class, 'bacaJuz']);
 
 // Tafsir
 Route::get('/tafsir', [App\Http\Controllers\DaftarTafsir::class, 'list']);

@@ -14,18 +14,91 @@
     <link href="https://fonts.googleapis.com/css2?family=Lateef&display=swap" rel="stylesheet"> 
 
     <style type="text/css">
-      #arab {
+      .arab {
         font-family: 'Lateef', cursive;
+      }
+
+      .bg1 {
+        background-color: #FC28FB !important;
+      }
+
+      .bg2 {
+        background-color: #F76E11 !important;
+      }
+
+      .bg3 {
+        background-color: #FBCAFF !important;
+      }
+
+      .bg4 {
+        background-color: #FDEBF7 !important;
+      }
+
+      .bg-theme {
+        background-color: #FFBC80 !important;
+      }
+
+      .c1 {
+        color: #FC28FB !important;
+      }
+
+      .c2 {
+        color: #FFADF0 !important;
+      }
+
+      .c3 {
+        color: #FBCAFF !important;
+      }
+
+      .c4 {
+        color: #FDEBF7 !important;
+      }
+
+      .active {
+        color: #F5F5F5 !important;
+      }
+
+      .brand {
+        color:  #FFE162 !important;
+      }
+
+      .btn-primary {
+        background-color: #270082 !important;
+        border-color: #270082 !important;
+      }
+
+      .btn-success {
+        background-color: #95CD41 !important;
+        border-color: #95CD41 !important;
+      }
+
+      .text-primary {
+        color: #FFE162 !important;
+      }
+
+      .foottext {
+        color: #694E4E;
+      }
+
+      .bg-card {
+        background-color: #FF9F45 !important;
+      }
+
+      .footer {
+        position: fixed !important;
+        left: 0 !important;
+        bottom: 0 !important;
+        width: 100% !important;
       }
     </style>
 
     <title>{{ env('APP_NAME') }} | @yield('title')</title>
   </head>
-  <body>
+  <body class="bg-theme">
     <!-- Navbar -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg2">
       <div class="container">
-        <a class="navbar-brand" href="/">{{ env('APP_NAME') }}</a>
+        <a class="navbar-brand brand" href="/">{{ env('APP_NAME') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,9 +117,9 @@
       @yield('content')
     </div>
 
-    <footer class="footer mt-auto py-3 text-center bg-white">
+    <footer class="footer mt-auto py-3 text-center bg2 mb-0">
       <div class="container">
-        <span class="text-muted">Dibuat dengan 💜 oleh <b onclick="window.location.href = 'https://alfathir.id'">M Habiburrohman Al-Fathir</b>, dispesialkan untuk <b>Firdausi Ridhotul Ullah</b></span>
+        <span class="foottext">Dibuat dengan 💜 oleh <b onclick="window.location.href = 'https://alfathir.id'" class="brand">M Habiburrohman Al-Fathir</b>, dispesialkan untuk <b class="brand">Firdausi Ridhotul Ullah</b></span>
       </div>
     </footer>
 
