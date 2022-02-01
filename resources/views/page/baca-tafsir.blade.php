@@ -13,7 +13,7 @@
 </div>
 
 @foreach($data['tafsir'] as $tafsir)
-<figure class="mb-2">
+<figure class="mb-2 bg-light rounded px-2 py-2">
   <p class="text-muted" style="margin-bottom: -5px !important">{{ $data['nomor'] }}:{{ $tafsir['ayat'] }}</p>
   <blockquote class="blockquote">
     <p>{{ $tafsir['tafsir'] }}</p>

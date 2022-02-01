@@ -9,7 +9,7 @@
 	@foreach($data as $dt)
 		<div class="col-lg-4">
 			<a href="/tafsir/{{ $dt['nomor'] }}" style="text-decoration: none !important;">
-				<div class="card">
+				<div class="card bg-card">
 				  <div class="card-body">
 				    <blockquote class="blockquote mb-0">
 				    	<p class="fs-5">{{ $dt['nomor'] }} - {{ $dt['nama_latin'] }}</p>
